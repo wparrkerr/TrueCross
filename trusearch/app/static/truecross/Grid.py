@@ -21,6 +21,9 @@ class Grid:
 		
 	def get_value_at(self, row, column):
 		return self.cells[row][column]
+		
+	def get_grid(self):
+		return self.cells
 	
 	def is_same_letter(self, row, column, letter):
 		return self.get_value_at(row, column) == letter
