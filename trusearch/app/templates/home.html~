@@ -1,0 +1,4 @@
+{% extends "base.html" %}
+{% block content %}
+	<div><p>Create a wordsearch by entering a list of seed words to include</p></div>
+{% endblock %}
