@@ -1,5 +1,7 @@
-#!usr/bin/python
-from Grid import Grid
+#!flask/bin/python
+import sys
+print(sys.version)
+from .Grid import Grid
 import random
 
 def main():
@@ -8,7 +10,7 @@ def main():
 			wordlist = open(raw_input("Enter the Wordlist filename: "), "r")
 			break
 		except:
-			print "Invalid Wordlist"
+			print("Invalid Wordlist")
 	
 	wordbank = wordlist.readlines()
 	wordbank = map(stripn, wordbank)
@@ -18,12 +20,16 @@ def main():
 	wordlist.close()
 	### SORT WORD BANK (LONGEST TO SHORTEST) ###
 	
-	g = Grid(maxlength(wordbank)+15)
+	g = Grid(maxlength(wordbank)+6)
 	
 	the_search, hints = create_wordsearch(g, wordbank)
-	print hints
+	print(hints)
 	the_search.write_to_file("search.txt")
 	
+def create_from_list(wordlist):	
+	g = Grid(maxlength(wordlist)+6)
+	return create_wordsearch(g, wordlist)
+
 def stripn(line):
 	return line[:-1]
 

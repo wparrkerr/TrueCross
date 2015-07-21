@@ -1,3 +1,4 @@
+#!flask/bin/python
 import random
 
 class Grid:
@@ -13,7 +14,7 @@ class Grid:
 		
 	def __str__(self):
 		for row in self.cells:
-			print row
+			print(row)
 		return "<Grid object, size:" + str(self.size) + ">"	
 	
 	def assign(self, row, column, value):

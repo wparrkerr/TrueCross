@@ -1,10 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-	<h2>Create a wordsearch by entering a list of seed words to include</h2>
+	<h2>Enter a list of words separated by commas</h2>
+	<h4>    Example: apple,carrot,fish,bird</h4>
 	<form action="" method="post" name="word">
 		{{ form.hidden_tag() }}
 		<p>
-			Enter a word here: {{ form.word_field(size=20) }} <input type="submit" value="Enter">
+			Enter a word here: {{ form.word_field(size=100) }} <input type="submit" value="Enter">
 		</p>
 	</form>
+	<br>
+	{% for row in puzzle %}
+		<br> {% for letter in row %}
+			 {{ letter }}
+			 {% endfor %}
+	{% endfor %}
 {% endblock %}
