@@ -18,7 +18,8 @@ p {
 #MainDiv {
 	  position: absolute;
 	  top: 120px;
-	  left: 20px
+	  left: 20px;
+	  font-family: Courier
 }
 
 #TitleText {
@@ -27,4 +28,9 @@ p {
 	   color: rgb(255,255,255);
 	   vertical-align: middle;
 	   margin-left: 20px;
+}
+
+#PuzzleDiv {
+		font-family: Courier;
+		position: relative
 }

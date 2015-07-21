@@ -9,9 +9,11 @@
 		</p>
 	</form>
 	<br>
+	<div id="PuzzleDiv">
 	{% for row in puzzle %}
 		<br> {% for letter in row %}
 			 {{ letter }}
 			 {% endfor %}
 	{% endfor %}
+	</div>
 {% endblock %}
